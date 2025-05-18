@@ -1,0 +1,548 @@
+/* Apple-Inspired Minimalist Styles */
+
+:root {
+    --background-light: #ffffff; /* White */
+    --background-dark: #1d1d1f;   /* Near Black - Apple's dark mode background */
+    --background-darker: #111113; /* Even darker for alternating sections */
+    --text-light: #f5f5f7;       /* Near White - Apple's light text on dark */
+    --text-dark: #1d1d1f;        /* Near Black - Apple's dark text on light */
+    --accent-blue: rgba(0, 122, 255, 0.7); /* Apple's classic blue, with some transparency */
+    --accent-green: #5AB279; /* Green for hover, taken from Idrolab logo for consistency */
+    --border-color-light: #d2d2d7;
+    --border-color-dark: #424245;
+    --hero-overlay-bg: rgba(0, 0, 0, 0.5); /* Semi-transparent black for hero overlay */
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400; /* Default to regular weight */
+}
+
+.container {
+    width: 90%;
+    max-width: 1080px; /* Max width for content */
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+#main-header {
+    background: var(--background-dark);
+    color: var(--text-light);
+    padding: 15px 0; /* Adjusted padding for better logo centering */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    max-height: 55px; /* Increased size for better visibility */
+    display: block;
+}
+
+#main-header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* Horizontal menu */
+}
+
+#main-header nav li {
+    margin-left: 30px; /* Spacing between menu items */
+}
+
+#main-header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 17px; /* Apple's header font size */
+    font-weight: 700; /* Bold for all nav links */
+    transition: color 0.3s ease;
+}
+
+#main-header nav a:hover {
+    color: var(--accent-green); /* Changed to green on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("/static/images/consulting_services_image.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: var(--hero-overlay-bg);
+    padding: 60px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    color: var(--text-light);
+}
+
+.hero-section .subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(245, 245, 247, 0.9);
+    margin-bottom: 0;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content-section.bg-light {
+    background-color: #f5f5f7;
+    color: var(--text-dark);
+}
+
+.content-section.bg-light h2,
+.content-section.bg-light h3,
+.content-section.bg-light p {
+    color: var(--text-dark);
+}
+
+.content-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.content-section p {
+    font-size: 19px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    color: #555; /* Default for light backgrounds, overridden for dark */
+}
+
+#mission-vision .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+#mission-vision .text-block {
+    flex: 1;
+    max-width: 45%;
+}
+
+#mission-vision .text-block h2 {
+    font-size: 32px;
+}
+
+/* Advisory Solutions - Services List */
+#services .container > p {
+    margin-bottom: 40px; /* Add more space after the main paragraphs before the icons list */
+}
+
+.advisory-services-list {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between items */
+    margin-top: 40px; /* Space above the list */
+    text-align: center;
+}
+
+.advisory-service-item {
+    flex: 1 1 180px; /* Flex properties for responsiveness, base width ~180px */
+    max-width: 200px; /* Max width for each item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advisory-service-item img {
+    max-height: 50px; /* Icon size */
+    margin-bottom: 15px;
+}
+
+.advisory-service-item p {
+    font-size: 15px; /* Text size for service description */
+    color: var(--text-dark); /* Ensure text color matches section */
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Partners Section */
+#partners h2 {
+    margin-bottom: 40px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.partner-logo {
+    text-align: center;
+}
+
+.partner-logo img {
+    max-height: 60px;
+    max-width: 180px;
+    opacity: 0.7; /* Keep opacity for consistency */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Added filter to transition */
+}
+
+/* Apply grayscale only to non-SVG images initially */
+.partner-logo img:not([src$=".svg"]) {
+    filter: grayscale(100%);
+}
+
+.partner-logo img:hover:not([src$=".svg"]) {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* For SVG logos, we might not want grayscale, or handle it differently if needed */
+.partner-logo img[src$=".svg"] {
+    opacity: 0.85; /* Slightly more opaque for SVGs if they appear too faint */
+}
+
+.partner-logo img[src$=".svg"]:hover {
+    opacity: 1;
+}
+
+.partner-logo p {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+/* Shop Section */
+#shop h2 {
+    margin-bottom: 20px;
+}
+
+.shop-intro {
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.shop-category-section {
+    margin-bottom: 60px;
+}
+
+.shop-category-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color-light);
+    padding-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 12px; /* Apple-like rounded corners */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content 아래 정렬 */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: contain; /* Ensures image fits well, change to 'cover' if preferred */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    min-height: 44px; /* Ensure consistent height for titles */
+}
+
+.product-card .product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to take available space */
+    min-height: 40px; /* Ensure consistent height for descriptions */
+}
+
+.product-card .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin-bottom: 0;
+}
+
+/* Footer */
+#main-footer {
+    background: var(--background-light);
+    color: #888;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color-light);
+    font-size: 14px;
+}
+
+#main-footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+#main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media(max-width: 992px) {
+    .advisory-services-list {
+        justify-content: space-around;
+    }
+    .advisory-service-item {
+        flex-basis: calc(33.333% - 20px); /* 3 items per row */
+        max-width: calc(33.333% - 20px);
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media(max-width: 768px){
+    #main-header .container {
+        flex-direction: column;
+    }
+
+    #logo {
+        margin-bottom: 15px;
+    }
+
+    #main-header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #main-header nav li {
+        margin: 5px 10px;
+    }
+
+    .hero-section {
+        min-height: 50vh;
+    }
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-section .subtitle {
+        font-size: 20px;
+    }
+
+    .hero-overlay {
+        padding: 40px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+
+    .content-section p {
+        font-size: 17px;
+    }
+
+    #mission-vision .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mission-vision .text-block {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .advisory-services-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .advisory-service-item {
+        flex-basis: 100%; /* Full width for each item */
+        max-width: 300px; /* Max width for stacked items */
+        margin-bottom: 30px; /* Space between stacked items */
+    }
+    .advisory-service-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .partner-logos {
+        gap: 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .shop-category-section h3 {
+        font-size: 24px;
+    }
+    .product-card h4 {
+        font-size: 17px;
+        min-height: 40px;
+    }
+    .product-card .product-description {
+        font-size: 13px;
+        min-height: 36px;
+    }
+    .product-card .product-price {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 480px){
+    .hero-section {
+        min-height: 40vh;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-section .subtitle {
+        font-size: 18px;
+    }
+
+    .hero-overlay {
+        padding: 30px 10px;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    #main-header nav li {
+        margin: 5px;
+    }
+
+    #main-header nav a {
+        font-size: 15px;
+    }
+
+    .advisory-service-item img {
+        max-height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .advisory-service-item p {
+        font-size: 14px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .product-card img {
+        height: 180px;
+    }
+}
+
+
+
+/* Contact Page Minimal Styles */
+#contact-main-content.content-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#contact-main-content .container h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.contact-details-minimal {
+    max-width: 550px;
+    margin: 0 auto; /* Centra il blocco dei dettagli */
+}
+
+.contact-details-minimal p {
+    font-size: 1.15rem; /* Circa 18px, per buona leggibilità */
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: var(--text-dark);
+}
+
+.contact-details-minimal p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-details-minimal p strong {
+    font-weight: 700;
+}
+
+.contact-details-minimal a {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details-minimal a:hover {
+    text-decoration: underline;
+}
+

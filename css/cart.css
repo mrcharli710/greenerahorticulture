@@ -1,0 +1,339 @@
+/* Stili per il carrello in stile Apple */
+
+/* Icona del carrello */
+#cart-icon-container {
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#cart-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-light);
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--accent-green);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none; /* Nascosto di default, mostrato quando ci sono articoli */
+}
+
+/* Pannello del carrello */
+#cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Nascosto di default */
+    width: 380px;
+    max-width: 90vw;
+    height: 100vh;
+    background-color: var(--background-light);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-panel.open {
+    right: 0;
+}
+
+/* Overlay scuro quando il carrello è aperto */
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+#cart-overlay.open {
+    display: block;
+}
+
+/* Intestazione del carrello */
+#cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color-light);
+    background-color: var(--background-light);
+}
+
+#cart-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    font-size: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenuto del carrello */
+#cart-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Articoli nel carrello */
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    margin: 40px 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.cart-item-price {
+    margin: 0;
+    font-size: 15px;
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.quantity-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color-light);
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.cart-item-quantity span {
+    margin: 0 8px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    color: #ff3b30; /* Rosso Apple per eliminazione */
+}
+
+/* Footer del carrello */
+#cart-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-color-light);
+    background-color: var(--background-light);
+}
+
+#cart-total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cart-total-container p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#cart-total {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+
+#checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#checkout-btn:hover {
+    background-color: rgba(0, 122, 255, 0.9);
+}
+
+#clear-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    color: #ff3b30; /* Rosso Apple */
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#clear-cart-btn:hover {
+    background-color: #fff1f0;
+    border-color: #ff3b30;
+}
+
+/* Pulsante Aggiungi al carrello */
+.add-to-cart-btn {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-btn svg {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: rgba(0, 122, 255, 0.9);
+}
+
+/* Notifica */
+#notification {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1002;
+    transition: bottom 0.3s ease;
+}
+
+#notification.show {
+    bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #cart-panel {
+        width: 100vw;
+    }
+    
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cart-item-details h4 {
+        font-size: 14px;
+    }
+    
+    .cart-item-price {
+        font-size: 13px;
+    }
+    
+    .quantity-btn {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .cart-item-quantity span {
+        margin: 0 5px;
+    }
+}

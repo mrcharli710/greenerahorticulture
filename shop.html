@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenERA Shop - Cannabis Cultivation Products in Malta</title>
+    <meta name="description" content="Explore GreenERA Horticulture's shop for high-quality fertilizers, cultivation equipment, packaging, and merchandise for cannabis enthusiasts and professionals in Malta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html"><img src="/images/logo_main_updated.png" alt="GreenERA Horticulture Ltd. Logo - Cannabis Consulting Malta, Organic & Hydroponic Grow" id="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#services" class="nav-advisory">Advisory</a></li> 
+                    <li><a href="index.html#partners">Partners</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contatti.html">Contact</a></li>
+                    <li id="cart-icon-container" onclick="openCart()">
+                        <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        <span id="cart-count">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="shop-main-content" class="content-section bg-light" style="padding-top: 40px;">
+            <div class="container">
+                <h2>GreenERA Shop</h2>
+                <p class="shop-intro">Explore our curated selection of high-quality products for cannabis cultivation and more. We partner with leading brands to bring you the best in fertilizers, equipment, and accessories.</p>
+    
+                <section id="shop-category-fertilizers" class="shop-category-section">
+                    <h3>Fertilizers</h3>
+                    <div class="product-grid">
+                        <!-- Fertilizers Products Start -->
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS VEG A 1L">
+                            <h4>PREMIUM NUTRIENTS VEG A 1L</h4>
+                            <p class="product-description">Nutriente premium per la fase vegetativa, parte A.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('veg-a-1l', 'PREMIUM NUTRIENTS VEG A 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS VEG B 1L">
+                            <h4>PREMIUM NUTRIENTS VEG B 1L</h4>
+                            <p class="product-description">Nutriente premium per la fase vegetativa, parte B.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('veg-b-1l', 'PREMIUM NUTRIENTS VEG B 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BLOOM A 1L">
+                            <h4>PREMIUM NUTRIENTS BLOOM A 1L</h4>
+                            <p class="product-description">Nutriente premium per la fase di fioritura, parte A.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('bloom-a-1l', 'PREMIUM NUTRIENTS BLOOM A 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BLOOM B 1L">
+                            <h4>PREMIUM NUTRIENTS BLOOM B 1L</h4>
+                            <p class="product-description">Nutriente premium per la fase di fioritura, parte B.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('bloom-b-1l', 'PREMIUM NUTRIENTS BLOOM B 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BOOSTER A 1L">
+                            <h4>PREMIUM NUTRIENTS BOOSTER A 1L</h4>
+                            <p class="product-description">Booster premium per la crescita, parte A.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('booster-a-1l', 'PREMIUM NUTRIENTS BOOSTER A 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BOOSTER B 1L">
+                            <h4>PREMIUM NUTRIENTS BOOSTER B 1L</h4>
+                            <p class="product-description">Booster premium per la crescita, parte B.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('booster-b-1l', 'PREMIUM NUTRIENTS BOOSTER B 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS CAL MAG 1L">
+                            <h4>PREMIUM NUTRIENTS CAL MAG 1L</h4>
+                            <p class="product-description">Integratore premium di Calcio e Magnesio.</p>
+                            <p class="product-price">€17.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('cal-mag-1l', 'PREMIUM NUTRIENTS CAL MAG 1L', '€17.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS TOTAL CARE 1L">
+                            <h4>PREMIUM NUTRIENTS TOTAL CARE 1L</h4>
+                            <p class="product-description">Trattamento completo premium per la cura delle piante.</p>
+                            <p class="product-price">€19.90</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('total-care-1l', 'PREMIUM NUTRIENTS TOTAL CARE 1L', '€19.90', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS VEG A 5L">
+                            <h4>PREMIUM NUTRIENTS VEG A 5L</h4>
+                            <p class="product-description">Nutriente premium per la fase vegetativa, parte A, formato 5L.</p>
+                            <p class="product-price">€75.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('veg-a-5l', 'PREMIUM NUTRIENTS VEG A 5L', '€75.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS VEG B 5L">
+                            <h4>PREMIUM NUTRIENTS VEG B 5L</h4>
+                            <p class="product-description">Nutriente premium per la fase vegetativa, parte B, formato 5L.</p>
+                            <p class="product-price">€75.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('veg-b-5l', 'PREMIUM NUTRIENTS VEG B 5L', '€75.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BLOOM A 5L">
+                            <h4>PREMIUM NUTRIENTS BLOOM A 5L</h4>
+                            <p class="product-description">Nutriente premium per la fase di fioritura, parte A, formato 5L.</p>
+                            <p class="product-price">€75.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('bloom-a-5l', 'PREMIUM NUTRIENTS BLOOM A 5L', '€75.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BLOOM B 5L">
+                            <h4>PREMIUM NUTRIENTS BLOOM B 5L</h4>
+                            <p class="product-description">Nutriente premium per la fase di fioritura, parte B, formato 5L.</p>
+                            <p class="product-price">€75.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('bloom-b-5l', 'PREMIUM NUTRIENTS BLOOM B 5L', '€75.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS TOTAL CARE 5L">
+                            <h4>PREMIUM NUTRIENTS TOTAL CARE 5L</h4>
+                            <p class="product-description">Trattamento completo premium per la cura delle piante, formato 5L.</p>
+                            <p class="product-price">€80.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('total-care-5l', 'PREMIUM NUTRIENTS TOTAL CARE 5L', '€80.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS VEG A 25L">
+                            <h4>PREMIUM NUTRIENTS VEG A 25L</h4>
+                            <p class="product-description">Nutriente premium per la fase vegetativa, parte A, formato 25L.</p>
+                            <p class="product-price">€290.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('veg-a-25l', 'PREMIUM NUTRIENTS VEG A 25L', '€290.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS BLOOM A 25L">
+                            <h4>PREMIUM NUTRIENTS BLOOM A 25L</h4>
+                            <p class="product-description">Nutriente premium per la fase di fioritura, parte A, formato 25L.</p>
+                            <p class="product-price">€290.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('bloom-a-25l', 'PREMIUM NUTRIENTS BLOOM A 25L', '€290.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="/images/shop/placeholder_fertilizer.png" alt="PREMIUM NUTRIENTS TOTAL CARE 25L">
+                            <h4>PREMIUM NUTRIENTS TOTAL CARE 25L</h4>
+                            <p class="product-description">Trattamento completo premium per la cura delle piante, formato 25L.</p>
+                            <p class="product-price">€320.00</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('total-care-25l', 'PREMIUM NUTRIENTS TOTAL CARE 25L', '€320.00', '/images/shop/placeholder_fertilizer.png')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                Aggiungi al carrello
+                            </button>
+                        </div>
+                        <!-- Fertilizers Products End -->
+                    </div>
+                </section>
+    
+                <section id="shop-category-equipment" class="shop-category-section">
+                    <h3>Cultivation Equipment & Tools</h3>
+                    <div class="product-grid">
+                        <!-- Equipment Products Start -->
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_equipment.png" alt="LED Grow Light - Full Spectrum 600W">
+                            <h4>LED Grow Light - Full Spectrum 600W</h4>
+                            <p class="product-description">Lampada LED a spettro completo per tutte le fasi di coltivazione.</p>
+                            <p class="product-price">€150.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_equipment.png" alt="Digital pH Meter Pro">
+                            <h4>Digital pH Meter Pro</h4>
+                            <p class="product-description">Misuratore di pH digitale di precisione per soluzioni nutritive.</p>
+                            <p class="product-price">€45.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_equipment.png" alt="Fabric Pots - Set of 5 (10L)">
+                            <h4>Fabric Pots - Set of 5 (10L)</h4>
+                            <p class="product-description">Set di 5 vasi in tessuto traspirante da 10 litri.</p>
+                            <p class="product-price">€35.00</p>
+                        </div>
+                        <!-- Equipment Products End -->
+                    </div>
+                </section>
+    
+                <section id="shop-category-packaging-merchandise" class="shop-category-section">
+                    <h3>Packaging & Merchandise</h3>
+                    <div class="product-grid">
+                        <!-- Packaging & Merchandise Products Start -->
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_packaging.png" alt="Glass Jars with Airtight Lid - 100ml (Pack of 10)">
+                            <h4>Glass Jars with Airtight Lid - 100ml (Pack of 10)</h4>
+                            <p class="product-description">Confezione da 10 barattoli in vetro da 100ml con chiusura ermetica.</p>
+                            <p class="product-price">€18.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_packaging.png" alt="Smell-Proof Bags - Medium (Pack of 50)">
+                            <h4>Smell-Proof Bags - Medium (Pack of 50)</h4>
+                            <p class="product-description">Confezione da 50 buste anti-odore di medie dimensioni.</p>
+                            <p class="product-price">€15.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_merchandise.png" alt="GreenERA Horticulture T-Shirt - Organic Cotton">
+                            <h4>GreenERA Horticulture T-Shirt - Organic Cotton</h4>
+                            <p class="product-description">T-shirt ufficiale GreenERA Horticulture in cotone organico.</p>
+                            <p class="product-price">€22.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_merchandise.png" alt="GreenERA Logo Sticker Pack (5 Designs)">
+                            <h4>GreenERA Logo Sticker Pack (5 Designs)</h4>
+                            <p class="product-description">Set di adesivi con design esclusivi GreenERA.</p>
+                            <p class="product-price">€8.00</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="/static/images/shop/placeholder_merchandise.png" alt="GreenERA Premium Grinder">
+                            <h4>GreenERA Premium Grinder</h4>
+                            <p class="product-description">Grinder di alta qualità con logo GreenERA inciso.</p>
+                            <p class="product-price">€28.00</p>
+                        </div>
+                        <!-- Packaging & Merchandise Products End -->
+                    </div>
+                </section>
+    
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p>&copy; 2024 GreenERA Horticulture Ltd. All rights reserved. | <a href="http://www.greenerahorticulture.com">www.greenerahorticulture.com</a></p>
+            <p>This site is optimized for computers, tablets, and smartphones.</p>
+        </div>
+    </footer>
+
+    <!-- Pannello del carrello -->
+    <div id="cart-panel">
+        <div id="cart-header">
+            <h3>Il tuo carrello</h3>
+            <button id="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cart-content">
+            <div id="cart-items">
+                <!-- Gli articoli del carrello verranno inseriti qui dinamicamente -->
+            </div>
+        </div>
+        <div id="cart-footer">
+            <div id="cart-total-container">
+                <p>Totale:</p>
+                <span id="cart-total">€0.00</span>
+            </div>
+            <button id="checkout-btn" onclick="checkout()">Procedi al checkout</button>
+            <button id="clear-cart-btn" onclick="clearCart()">Svuota carrello</button>
+        </div>
+    </div>
+
+    <!-- Notifica -->
+    <div id="notification"></div>
+
+    <!-- Script del carrello -->
+    <script src="/static/js/cart.js"></script>
+</body>
+</html>
