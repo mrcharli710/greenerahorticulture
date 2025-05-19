@@ -80,7 +80,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-image: url("/static/images/consulting_services_image.jpg");
+    background-image: url("../images/consulting_services_image.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
